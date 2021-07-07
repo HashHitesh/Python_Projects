@@ -5,7 +5,7 @@ import tkinter as tk
 t = ["Rock", "Paper", "Scissors"]
 
 window = tk.Tk()
-window.title("R_P_S")
+window.title("RPS")
 window.geometry("300x300")
 
 
@@ -16,37 +16,62 @@ Msg1.place(x=20,y=20)
 def rock():
     computer = t[randint(0,2)]
     player = "Rock"
+
     if player == computer:
-        print("Tie!")
+
+        l1=tk.Label(text="Tie !!")
+        l1.place(x=80,y=150)
+
     elif player == "Rock":
+
         if computer == "Paper":
-            print("You lose !", computer, "covers", player)
+            l2=tk.Label(text="Lost !")
+            l2.place(x=80,y=150)
+
         else:
-            print("You win !", player, "smashes", computer)
+             l3=tk.Label(text="Won !")
+             l3.place(x=80,y=150)
+             
 
 
 def paper():
     computer = t[randint(0,2)]
     player ="Paper"
+
     if player == computer:
-        print("Tie!")
+
+        l4=tk.Label(text="Tie !!")
+        l4.place(x=80,y=150)
+
     elif player == "Paper":
+
         if computer == "Scissors":
-            print("You lose !", computer, "cut", player)
+            l5=tk.Label(text="Lost !")
+            l5.place(x=80,y=150)
+
         else:
-            print("You win !", player, "covers", computer)
+             l6=tk.Label(text="Won !")
+             l6.place(x=80,y=150)
 
 
 def scissors():
     computer = t[randint(0,2)]
     player = "Scissors"
+
     if player == computer:
-        print("Tie!")
+
+        l7=tk.Label(text="Tie !!!")
+        l7.place(x=80,y=150)
+
     elif player == "Scissors":
+
         if computer == "Rock":
-            print("You lose...", computer, "smashes", player)
+            l8=tk.Label(text="Lost !")
+            l8.place(x=80,y=150)
+
         else:
-            print("You win !", player, "cut", computer)
+             l9=tk.Label(text="Won !")
+             l9.place(x=80,y=150)
 
 
 b1= tk.Button(window,text='Rock',command=rock)
