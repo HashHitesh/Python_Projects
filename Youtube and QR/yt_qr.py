@@ -42,8 +42,8 @@ def proceed():
  disp.bind("<Button-1>",lambda e: callback(temp))
  disp.place(x=100,y=110)
 
- #url = pyqrcode.create(temp)
- #url.svg("QR.svg", scale = 10) 
+ url = pyqrcode.create(temp)
+ url.svg("QR.svg", scale = 10) 
  
 
 
